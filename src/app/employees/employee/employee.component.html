@@ -1,0 +1,23 @@
+<h1 class="text-muted">Employee Registration</h1>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+    <div class="form-group">
+      <label for="name" class="bmd-label-floating">Full Name</label>
+      <input required type="text" class="form-control" id="name" name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName">
+    </div>
+    <div class="form-group">
+      <label for="position" class="bmd-label-floating">Position</label>
+      <input type="text" class="form-control" id="position" name="position" #position="ngModel" [(ngModel)]="service.formData.position">
+    </div>
+    <div class="form-group">
+      <label for="empCode" class="bmd-label-floating">Employe Code</label>
+      <input type="text" class="form-control" id="empCode" name="empCode" #empCode="ngModel" [(ngModel)]="service.formData.empCode">
+    </div>
+    <div class="form-group">
+      <label for="mobile" class="bmd-label-floating">Mobile Number</label>
+      <input type="text" class="form-control" id="mobile" name="mobile" #mobile="ngModel" [(ngModel)]="service.formData.mobile">
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-raised btn-info btn-block">Submit</button>
+    </div>
+</form>
